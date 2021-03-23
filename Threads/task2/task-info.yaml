@@ -102,8 +102,8 @@ files:
 - name: src/Racer.java
   visible: true
   placeholders:
-  - offset: 19
-    length: 57
+  - offset: 40
+    length: 56
     placeholder_text: "/* TODO \nThis class is exactly as the Racer from Task 1*/"
     initial_state:
       length: 57
