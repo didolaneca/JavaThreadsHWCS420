@@ -79,34 +79,34 @@ files:
       offset: 0
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       import java.io.File;
       import java.io.FileWriter;
       import java.io.IOException;
       import java.util.LinkedList;
       import java.util.List;
-  - offset: 192
-    length: 48
+  - offset: 369
+    length: 47
     placeholder_text: "/* TODO \nInitialize this to some kind of List */"
     initial_state:
       length: 48
       offset: 192
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: new LinkedList<String>()
-  - offset: 297
+  - offset: 672
     length: 33
     placeholder_text: "/* TODO \nAdd a title to the DOM*/"
     initial_state:
       length: 33
       offset: 297
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: dom.add("<h1>"+title+"</h1>");
-  - offset: 342
+  - offset: 717
     length: 107
     placeholder_text: "/* TODO \nimplement addParagraph that receives a String and\
       \ puts it in the dom \nsurrounded by <p> and </p>*/"
@@ -114,13 +114,13 @@ files:
       length: 107
       offset: 342
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |
       public void addParagraph(String paragraph){
               dom.add("<p>"+paragraph+"</p>");
           }
-  - offset: 545
+  - offset: 1176
     length: 72
     placeholder_text: |-
       /* TODO
@@ -130,12 +130,12 @@ files:
       offset: 545
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       for(String e:dom){
                   html=html+e+"\n";
               }
-  - offset: 712
+  - offset: 1544
     length: 81
     placeholder_text: "/* TODO \nSave a string representation of this webpage to the\
       \ filename provided.*/"
@@ -144,7 +144,7 @@ files:
       offset: 712
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       try(FileWriter out = new FileWriter(new File(filename))){
                   out.write(this.toString());
@@ -174,14 +174,14 @@ files:
       offset: 0
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       import java.util.Scanner;
       import java.util.concurrent.Executors;
       import java.util.concurrent.ScheduledExecutorService;
       import java.util.concurrent.TimeUnit;
-  - offset: 307
-    length: 79
+  - offset: 464
+    length: 80
     placeholder_text: |-
       /* TODO
       Initialize wp to an empty webpage, and filename to the value passed. */
@@ -190,12 +190,12 @@ files:
       offset: 307
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |2-
               this.wp = new WebPage();
               this.filename = filename;
-  - offset: 463
-    length: 77
+  - offset: 687
+    length: 122
     placeholder_text: |-
       /* TODO
       Using Executors, instantiate a new SingleThreadedScheduledExecutor */
@@ -203,10 +203,10 @@ files:
       length: 77
       offset: 463
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: Executors.newSingleThreadScheduledExecutor();
-  - offset: 549
+  - offset: 818
     length: 192
     placeholder_text: "/* TODO \nSchedule at a fixed rate a runnable that executes\
       \ checkSave. if checkSave is true it will print \"Saved\", This has to be schdule\
@@ -216,13 +216,13 @@ files:
       offset: 549
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       service.scheduleAtFixedRate(()->{
                   if (checkSave())
                       System.out.println("...Saved");
               },10L,10L, TimeUnit.SECONDS);
-  - offset: 906
+  - offset: 1254
     length: 139
     placeholder_text: "/* TODO \nIf the user types \"quit\" the loop ends. If the\
       \ input starts with t: you add a title to the webpage. If not, you add a paragraph.*/"
@@ -231,7 +231,7 @@ files:
       offset: 906
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |2-
                   String text = kbd.nextLine();
                   if(text.equals("quit"))
@@ -240,17 +240,17 @@ files:
                       wp.addTitle(text.substring(2));
                   else
                       wp.addParagraph(text);
-  - offset: 1072
-    length: 35
+  - offset: 1771
+    length: 44
     placeholder_text: "/* TODO \nShutdown the threads NOW*/"
     initial_state:
       length: 35
       offset: 1072
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: shutdownNow()
-  - offset: 1204
+  - offset: 1912
     length: 286
     placeholder_text: "/* TODO \nIf the text of the wp (String representation) is\
       \ equal to the last String reperesentation (stored in tmp) returns false. Otherwise,\
@@ -261,7 +261,7 @@ files:
       offset: 1204
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       if(this.wp.toString().equals(this.temp))
                   return false;
@@ -291,5 +291,14 @@ files:
     \ to the most current string representation of this webpage, and the funtion returns\
     \ true.*/\n    }\n}\n"
   learner_created: false
-status: Unchecked
+- name: first.html
+  visible: true
+  learner_created: true
+- name: deleteme.html
+  visible: true
+  learner_created: true
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Tue, 30 Mar 2021 17:01:49 UTC
 record: -1
